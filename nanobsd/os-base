@@ -344,6 +344,7 @@ if [ "${DEBUG}" = 1 ]; then
 fi
 
 add_port ftp/tftp-hpa
+add_port net/ifstat
 
 if [ "${NANO_PACKAGE_ONLY}" -eq 1 ]; then
  	CONF_INSTALL="${CONF_INSTALL}
