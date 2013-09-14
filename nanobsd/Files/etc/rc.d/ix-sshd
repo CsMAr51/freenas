@@ -62,8 +62,8 @@ Protocol 2
 UseDNS no
 Subsystem       sftp    /usr/libexec/sftp-server -l ${ssh_sftp_log_level} -f ${ssh_sftp_log_facility}
 ChallengeResponseAuthentication no
-ClientAliveCountMax 3
-ClientAliveInterval 15
+#ClientAliveCountMax 3
+#ClientAliveInterval 15
 EOF
 	    if [ "$ssh_tcpport" -gt 0 ]; then
 		echo "Port $ssh_tcpport" >> $cfg
