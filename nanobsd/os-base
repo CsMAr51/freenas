@@ -1188,15 +1188,15 @@ last_orders() {
 
 	) > "${full_image_log}" 2>&1
 
-	pprint 2 "Creating ISO image"
-	pprint 3 "log: ${cd_image_log}"
-
-	(
-	set -x
-
-	sh "$AVATAR_ROOT/build/create_iso.sh"
-
-	) > "${cd_image_log}" 2>&1
+#	pprint 2 "Creating ISO image"
+#	pprint 3 "log: ${cd_image_log}"
+#
+#	(
+#	set -x
+#
+#	sh "$AVATAR_ROOT/build/create_iso.sh"
+#
+#	) > "${cd_image_log}" 2>&1
 
 }
 fi # $do_image
