@@ -105,6 +105,10 @@ options		VIMAGE
 device		carp
 device		snp
 
+# Enable device polling support
+options		DEVICE_POLLING
+options		HZ=1000
+
 # Make an SMP-capable kernel by default
 options 	SMP			# Symmetric MultiProcessor Kernel
 
