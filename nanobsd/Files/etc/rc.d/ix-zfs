@@ -38,7 +38,7 @@ import_zpools()
 		fi
 		/sbin/zpool set cachefile=/data/zfs/zpool.cache ${vol_name}
 		# Fixup mountpoints
-		[ -d /mnt/mnt ] && /sbin/zfs inherit -r mountpoint ${vol_name}
+		[ -d /mnt/mnt ] && /sbin/zfs inherit mountpoint ${vol_name}
 	done
 	cp /data/zfs/zpool.cache /data/zfs/zpool.cache.saved 2> /dev/null
 }

@@ -3016,7 +3016,7 @@ class notifier:
         stdout, stderr = imp.communicate()
         if imp.returncode == 0:
             # Reset all mountpoints in the zpool
-            self.zfs_inherit_option(name, 'mountpoint', True)
+            self.zfs_inherit_option(name, 'mountpoint', False)
             # Remember the pool cache
             self.__system("zpool set cachefile=/data/zfs/zpool.cache %s" % (name))
             # These should probably be options that are configurable from the GUI
