@@ -28,11 +28,11 @@ generate_tftp()
 		service="freenas-tftp"
 		echo "freenas-tftp $tftp_port/udp" >> $tmp_services_extra
 	    fi
-	    cmd="tftpd -l -s $tftp_directory -u $tftp_username -U $tftp_umask $tftp_options"
+	    cmd="in.tftpd -s $tftp_directory -u $tftp_username -U $tftp_umask $tftp_options"
 	    if [ "$tftp_newfiles" -eq 1 ]; then
-		cmd="$cmd -w"
+		cmd="$cmd -c"
 	    fi
-	    echo "$service dgram udp wait root /usr/libexec/tftpd $cmd" >> \
+	    echo "$service dgram udp wait root /usr/local/libexec/in.tftpd $cmd" >> \
 		$tmp_inetd_conf_extra
 	fi
     done

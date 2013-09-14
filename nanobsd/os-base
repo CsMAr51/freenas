@@ -343,6 +343,8 @@ if [ "${DEBUG}" = 1 ]; then
 	add_port devel/ctags
 fi
 
+add_port ftp/tftp-hpa
+
 if [ "${NANO_PACKAGE_ONLY}" -eq 1 ]; then
  	CONF_INSTALL="${CONF_INSTALL}
 ${PKG_ONLY_MAKE_CONF}
