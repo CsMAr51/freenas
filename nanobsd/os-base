@@ -1170,12 +1170,12 @@ last_orders() {
 		) > "${gui_image_log}" 2>&1
 	fi
 
-	pprint 2 "Compressing legacy gui upgrader"
-	pprint 3 "log: ${legacy_gui_image_log}"
-	(
-	set -x ;
-	time ${NANO_XZ} --verbose -9 -c "$firmware_img" > "$legacy_gui_upgrade_compressed_image"
-	) > "${legacy_gui_image_log}" 2>&1
+#	pprint 2 "Compressing legacy gui upgrader"
+#	pprint 3 "log: ${legacy_gui_image_log}"
+#	(
+#	set -x ;
+#	time ${NANO_XZ} --verbose -9 -c "$firmware_img" > "$legacy_gui_upgrade_compressed_image"
+#	) > "${legacy_gui_image_log}" 2>&1
 
 	pprint 2 "Compressing full disk image"
 	pprint 3 "log: ${full_image_log}"
