@@ -155,8 +155,8 @@ WITHOUT_SHAREDOCS=true
 # Pull in common definitions.
 . ${NANO_CFG_BASE}/common
 
-customize_cmd build_debug_kernel
-customize_cmd install_debug_kernel
+#customize_cmd build_debug_kernel
+#customize_cmd install_debug_kernel
 
 add_port textproc/libxml2
 add_port devel/libffi
